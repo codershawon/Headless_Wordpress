@@ -10,10 +10,13 @@ const Posts = () => {
     },[])
     console.log("Posts", posts);
     return (
+        <>
+        <h1 className='text-4xl'>Posts</h1>
         <div className='w-4/5 py-10 m-auto flex justify-between align-middle flex-wrap gap-10'>
             {
               posts.map((post)=>{
                     return (
+
                         <div key={post.id} className='card p-3 w-[330px] shadow-lg rounded-lg text-left flex flex-col gap-5'>
                             <img src="https://placehold.co/500x500" alt="demo" />
                            <h2 className='text-lg font-bold'>{post.title.rendered}</h2>
@@ -22,7 +25,7 @@ const Posts = () => {
                     )
               })
             }
-        </div>
+        </div></>
     );
 };
 
